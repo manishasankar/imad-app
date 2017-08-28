@@ -6,7 +6,16 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index.htmapl'));
+});
+app.get('/article-one ',function(req, res) {
+res.send('article-one is requested and it will be served') ;   
+});
+app.get('/article-two ',function(req, res) {
+res.send('article-two is requested and it will be served'); 
+});
+app.get('/article-three ',function(req, res) {
+res.send('article-three is requested and it will be served');
 });
 
 app.get('/ui/style.css', function (req, res) {
